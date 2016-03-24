@@ -1,5 +1,7 @@
 "use strict";
 
+require('dotenv').config();
+
 var FeedParser = require('feedparser')
 var request = require('request')
 
