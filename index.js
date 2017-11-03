@@ -68,6 +68,7 @@ app.get('/ajax/services/feed/load', function(req, res) {
   })
 
   feedparser.on('end', () => {
+    console.log({url: feed, entries: items.length})
     res.json({
       responseData: {
         feed: {
