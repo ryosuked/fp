@@ -1,10 +1,10 @@
 "use strict";
 
-var FeedParser = require('feedparser')
-var request = require('request')
-var feed = process.argv[2]
+const FeedParser = require('feedparser')
+const request = require('request')
+const feed = process.argv[2]
 
-var req = request.get({
+const req = request.get({
   method: 'GET',
   url: feed,
   gzip: true,
@@ -13,10 +13,10 @@ var req = request.get({
   }
 })
 
-var feedparser = new FeedParser({})
+const feedparser = new FeedParser({})
 
-var items = []
-var meta = {}
+const items = []
+let meta = {}
 
 req.on('error', function (error) {
   console.log(`Request error:${error}`)
@@ -37,7 +37,7 @@ feedparser.on('meta',  (m) => {
 })
 
 feedparser.on('readable', function () {
-  var item
+  let item
   while(item = this.read()) {
     items.push(item)
   }
