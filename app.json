@@ -2,5 +2,6 @@
   "name": "Feedparser API service",
   "description": "Feedparser API service",
   "repository": "https://github.com/rsk837033/fp",
-  "keywords": ["node", "express", "static"]
+  "keywords": ["node", "express", "static"],
+  "stack": "heroku-18"
 }
