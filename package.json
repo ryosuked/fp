@@ -2,6 +2,9 @@
   "name": "fp",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "12.x"
+  },
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
