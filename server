@@ -1,4 +1,5 @@
 #!/bin/sh
 
-npm run server
+docker-compose up
+#npm run server
 

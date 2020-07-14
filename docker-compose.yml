@@ -1,0 +1,15 @@
+version: '2'
+services:
+  json_proxy: &base
+    build: .
+    privileged: true
+    hostname: json_proxy.localdomain
+    volumes:
+      - .:/myapp
+    ports:
+      - 5000:5000
+    networks:
+      - default
+    tty: true
+    stdin_open: true
+    command: ['npm', 'run', 'server']
