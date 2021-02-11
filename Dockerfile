@@ -1,4 +1,4 @@
-FROM node:12.18.0-alpine
+FROM node:12.20-alpine
 ENV LANG C.UTF-8
 
 RUN mkdir /myapp
